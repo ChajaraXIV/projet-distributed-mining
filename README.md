@@ -1,17 +1,17 @@
 # Projet de Minage Distribué
 
-Ce projet est réalisé dans le cadre du cours Miage M1 - Réseaux. Il consiste à implémenter un système de minage distribué permettant de déléguer des tâches à plusieurs workers et de consolider les résultats.
+Ce projet est réalisé dans le cadre du cours Miage M1 - Réseaux. Il consiste à implémenter un système de minage distribué permettant de déléguer des difficultés à plusieurs workers et de consolider les résultats.
 
 ## Description du Projet
 
-L'objectif du projet est de développer une application composée d'un serveur centralisé et de plusieurs workers. Le serveur distribue des tâches de recherche de hash aux workers, lesquels tentent de trouver un nonce permettant de résoudre la tâche. Le serveur valide ensuite les résultats et informe les autres workers lorsque la solution est trouvée.
+L'objectif du projet est de développer une application composée d'un serveur centralisé et de plusieurs workers. Le serveur distribue des difficultés de recherche de hash aux workers, lesquels tentent de trouver un nonce permettant de résoudre la difficulté. Le serveur valide ensuite les résultats et informe les autres workers lorsque la solution est trouvée.
 
 ## Architecture
 
 Le projet est composé des éléments suivants :
 
-- **Serveur** : Récupère les tâches auprès d'une application web, les distribue aux workers, et gère la communication avec eux.
-- **Workers** : Se connectent au serveur, reçoivent les tâches et effectuent le calcul pour trouver le nonce correct.
+- **Serveur** : Lancé sur le port 1337, récupère les difficultés auprès d'une application web, les distribue aux workers, et gère la communication avec eux.
+- **Workers** : Se connectent au serveur, reçoivent les difficultés et effectuent le calcul pour trouver le nonce correct.
 
 ## Configuration et Exécution
 
@@ -23,7 +23,7 @@ Le projet est composé des éléments suivants :
 
 1. **Cloner le repository** :
     ```bash
-    git clone https://github.com/[votre_nom_utilisateur]/projet-distributed-mining.git
+    git clone https://github.com/ChajaraXIV/projet-distributed-mining.git
     cd projet-distributed-mining
     ```
 
@@ -62,4 +62,4 @@ Les workers se connectent automatiquement au serveur et attendent des tâches.
 - **FILALI Hatim**
 - **EDEKAKI Adam**
 - **KABBAJ Jad**
-- **MAGHAFRI Acharf**
+- **MAGHAFRI Achraf**
