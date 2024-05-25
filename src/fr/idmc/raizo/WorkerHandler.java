@@ -75,9 +75,8 @@ public class WorkerHandler implements Runnable {
         try {
             if (isAuthenticated) {
                 isMining = true;
-                long FalseStrat = 47203976527L;
                 while (isMining) {
-                    for (long nonce = FalseStrat + start; ; nonce += increment) {
+                    for (long nonce = start; ; nonce += increment) {
                         currentNonce = nonce;
                         String hash = calculateHash(nonce, payload);
                         // Vérifie si le hash commence par le nombre requis de zéros
