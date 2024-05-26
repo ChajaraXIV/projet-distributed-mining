@@ -85,7 +85,6 @@ public class ServerLauncher {
                     worker.setMining(false);
                     worker.sendMessage("CANCELLED");
                     worker.setStatus("Connected");
-                    System.out.println(worker.isMining());
                 }
             }
         } else if ("status".equals(cmd)) {
