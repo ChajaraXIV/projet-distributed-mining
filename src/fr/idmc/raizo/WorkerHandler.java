@@ -76,7 +76,7 @@ public class WorkerHandler implements Runnable {
             if (isAuthenticated) {
                 isMining = true;
                 while (isMining) {
-                    for (long nonce = start; ; nonce += increment) {
+                    for (long nonce = start;isMining; nonce += increment) {
                         currentNonce = nonce;
                         String hash = calculateHash(nonce, payload);
                         // Vérifie si le hash commence par le nombre requis de zéros
@@ -84,7 +84,7 @@ public class WorkerHandler implements Runnable {
                             // Validation du travail via l'API
                             boolean valid = WebApp.validateWork(difficulty, Long.toHexString(nonce), hash);
                             if (valid) {
-                                sendMessage("FOUND " + hash + " " + nonce);
+                                sendMessage("FOUND " + hash + " " + Long.toHexString(nonce));
                                 server.broadcastAuthenticated("SOLVED"); // Notification de la solution trouvée
                                 server.broadcastToConnect(); // Diffusion aux autres workers
                             }
